@@ -101,7 +101,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.public.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.public.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.public.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.public.api-removed.txt",
         sdk_version: "none",
@@ -125,7 +125,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.public.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.public.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.public.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.public.api-removed.txt",
         sdk_version: "none",
@@ -146,7 +146,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.platform.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.platform.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.platform.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.platform.api-removed.txt",
         sdk_version: "none",
@@ -167,7 +167,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.platform.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.platform.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.platform.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.platform.api-removed.txt",
         sdk_version: "none",
@@ -188,7 +188,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.intra.core.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.intra.core.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.intra.core.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.intra.core.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.intra.core.api-removed.txt",
         sdk_version: "none",
@@ -209,7 +209,7 @@ java_sdk_library_import {
     shared_library: false,
     public: {
         jars: ["sdk_library/public/conscrypt.module.intra.core.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.intra.core.api_stub_sources"],
+        stub_srcs: ["sdk_library/public/conscrypt.module.intra.core.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.intra.core.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.intra.core.api-removed.txt",
         sdk_version: "none",
