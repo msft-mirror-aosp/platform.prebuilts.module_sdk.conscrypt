@@ -31,7 +31,7 @@ prebuilt_bootclasspath_fragment {
 
 prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
-    prefer: true,
+    prefer: false,
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
@@ -70,7 +70,7 @@ java_import {
 
 java_import {
     name: "conscrypt",
-    prefer: true,
+    prefer: false,
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
@@ -110,7 +110,7 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.public.api",
-    prefer: true,
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//frameworks/base",
@@ -155,7 +155,7 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.platform.api",
-    prefer: true,
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//external/wycheproof",
@@ -197,7 +197,7 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.intra.core.api",
-    prefer: true,
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//external/okhttp",
@@ -275,7 +275,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libconscrypt_jni",
-    prefer: true,
+    prefer: false,
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
