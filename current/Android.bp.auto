@@ -6,16 +6,6 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-soong_config_module_type_import {
-    from: "packages/modules/common/Android.bp",
-    module_types: [
-        "module_cc_prebuilt_library_shared",
-        "module_java_import",
-        "module_java_sdk_library_import",
-        "module_prebuilt_bootclasspath_fragment",
-    ],
-}
-
 prebuilt_bootclasspath_fragment {
     name: "conscrypt-module-sdk_com.android.conscrypt-bootclasspath-fragment@current",
     sdk_member_name: "com.android.conscrypt-bootclasspath-fragment",
@@ -39,14 +29,9 @@ prebuilt_bootclasspath_fragment {
     },
 }
 
-module_prebuilt_bootclasspath_fragment {
+prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
@@ -87,14 +72,9 @@ java_import {
     ],
 }
 
-module_java_import {
+java_import {
     name: "conscrypt",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
@@ -136,14 +116,9 @@ java_sdk_library_import {
     },
 }
 
-module_java_sdk_library_import {
+java_sdk_library_import {
     name: "conscrypt.module.public.api",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//frameworks/base",
@@ -186,14 +161,9 @@ java_sdk_library_import {
     },
 }
 
-module_java_sdk_library_import {
+java_sdk_library_import {
     name: "conscrypt.module.platform.api",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//external/wycheproof",
@@ -233,14 +203,9 @@ java_sdk_library_import {
     },
 }
 
-module_java_sdk_library_import {
+java_sdk_library_import {
     name: "conscrypt.module.intra.core.api",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: [
         "//external/conscrypt",
         "//external/okhttp",
@@ -316,14 +281,9 @@ cc_prebuilt_library_shared {
     },
 }
 
-module_cc_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libconscrypt_jni",
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
-    },
+    prefer: false,
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
