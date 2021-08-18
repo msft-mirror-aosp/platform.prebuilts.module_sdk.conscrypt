@@ -1,6 +1,6 @@
 drops {
   android_build_drop {
-    build_id: "7548924"
+    build_id: "7611331"
     target: "mainline_modules-user"
     source_file: "mainline-sdks/conscrypt-module-sdk-current.zip"
   }
@@ -11,6 +11,9 @@ drops {
   git_branch: "sc-dev"
   transform: TRANSFORM_UNZIP
   transform_options {
-    exclude: "Android.bp"
+    rename {
+      from_path: "Android.bp"
+      to_path: "Android.bp.auto"
+    }
   }
 }
