@@ -31,7 +31,7 @@ prebuilt_bootclasspath_fragment {
 
 prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
-    prefer: false,
+    prefer: true,
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
@@ -74,7 +74,7 @@ java_import {
 
 java_import {
     name: "conscrypt",
-    prefer: false,
+    prefer: true,
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
