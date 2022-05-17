@@ -1,5 +1,16 @@
 // This is auto-generated. DO NOT EDIT.
 
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type_import {
+    from: "packages/modules/common/Android.bp",
+    module_types: [
+        "module_cc_prebuilt_library_shared",
+        "module_java_import",
+        "module_java_sdk_library_import",
+        "module_prebuilt_bootclasspath_fragment",
+    ],
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -13,6 +24,12 @@ prebuilt_bootclasspath_fragment {
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license@current"],
     contents: ["conscrypt-module-sdk_conscrypt@current"],
+    fragments: [
+        {
+            apex: "com.android.art",
+            module: "art-bootclasspath-fragment",
+        },
+    ],
     api: {
         stub_libs: ["conscrypt-module-sdk_conscrypt.module.public.api@current"],
     },
@@ -21,21 +38,34 @@ prebuilt_bootclasspath_fragment {
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
-prebuilt_bootclasspath_fragment {
+module_prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
     contents: ["conscrypt"],
+    fragments: [
+        {
+            apex: "com.android.art",
+            module: "art-bootclasspath-fragment",
+        },
+    ],
     api: {
         stub_libs: ["conscrypt.module.public.api"],
     },
@@ -44,11 +74,12 @@ prebuilt_bootclasspath_fragment {
     },
     hidden_api: {
         max_target_o_low_priority: ["hiddenapi/hiddenapi-max-target-o-low-priority.txt"],
-        stub_flags: "hiddenapi/stub-flags.csv",
         annotation_flags: "hiddenapi/annotation-flags.csv",
         metadata: "hiddenapi/metadata.csv",
         index: "hiddenapi/index.csv",
-        all_flags: "hiddenapi/all-flags.csv",
+        signature_patterns: "hiddenapi/signature-patterns.csv",
+        filtered_stub_flags: "hiddenapi/filtered-stub-flags.csv",
+        filtered_flags: "hiddenapi/filtered-flags.csv",
     },
 }
 
@@ -65,16 +96,22 @@ java_import {
         "test_com.android.conscrypt",
     ],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license@current"],
-    jars: ["java/conscrypt.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/conscrypt.jar"],
     permitted_packages: [
         "android.net.ssl",
         "com.android.org.conscrypt",
     ],
 }
 
-java_import {
+module_java_import {
     name: "conscrypt",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
@@ -85,7 +122,7 @@ java_import {
         "test_com.android.conscrypt",
     ],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
-    jars: ["java/conscrypt.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/conscrypt.jar"],
     permitted_packages: [
         "android.net.ssl",
         "com.android.org.conscrypt",
@@ -96,10 +133,10 @@ java_sdk_library_import {
     name: "conscrypt-module-sdk_conscrypt.module.public.api@current",
     sdk_member_name: "conscrypt.module.public.api",
     visibility: [
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//frameworks/base",
         "//frameworks/base/api",
-        "//libcore",
         "//packages/modules/IPsec",
         "//packages/modules/common/sdk",
         "//prebuilts:__subpackages__",
@@ -112,18 +149,41 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/public/conscrypt.module.public.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.public.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/public/conscrypt.module.public.api_annotations.zip",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["sdk_library/system/conscrypt.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/system/conscrypt.module.public.api.srcjar"],
+        current_api: "sdk_library/system/conscrypt.module.public.api.txt",
+        removed_api: "sdk_library/system/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/system/conscrypt.module.public.api_annotations.zip",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["sdk_library/module-lib/conscrypt.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/conscrypt.module.public.api.srcjar"],
+        current_api: "sdk_library/module-lib/conscrypt.module.public.api.txt",
+        removed_api: "sdk_library/module-lib/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/module-lib/conscrypt.module.public.api_annotations.zip",
         sdk_version: "none",
     },
 }
 
-java_sdk_library_import {
+module_java_sdk_library_import {
     name: "conscrypt.module.public.api",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//frameworks/base",
         "//frameworks/base/api",
-        "//libcore",
         "//packages/modules/IPsec",
         "//packages/modules/common/sdk",
         "//prebuilts:__subpackages__",
@@ -136,6 +196,23 @@ java_sdk_library_import {
         stub_srcs: ["sdk_library/public/conscrypt.module.public.api.srcjar"],
         current_api: "sdk_library/public/conscrypt.module.public.api.txt",
         removed_api: "sdk_library/public/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/public/conscrypt.module.public.api_annotations.zip",
+        sdk_version: "none",
+    },
+    system: {
+        jars: ["sdk_library/system/conscrypt.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/system/conscrypt.module.public.api.srcjar"],
+        current_api: "sdk_library/system/conscrypt.module.public.api.txt",
+        removed_api: "sdk_library/system/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/system/conscrypt.module.public.api_annotations.zip",
+        sdk_version: "none",
+    },
+    module_lib: {
+        jars: ["sdk_library/module-lib/conscrypt.module.public.api-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/conscrypt.module.public.api.srcjar"],
+        current_api: "sdk_library/module-lib/conscrypt.module.public.api.txt",
+        removed_api: "sdk_library/module-lib/conscrypt.module.public.api-removed.txt",
+        annotations: "sdk_library/module-lib/conscrypt.module.public.api_annotations.zip",
         sdk_version: "none",
     },
 }
@@ -144,9 +221,9 @@ java_sdk_library_import {
     name: "conscrypt-module-sdk_conscrypt.module.platform.api@current",
     sdk_member_name: "conscrypt.module.platform.api",
     visibility: [
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//external/wycheproof",
-        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -161,13 +238,19 @@ java_sdk_library_import {
     },
 }
 
-java_sdk_library_import {
+module_java_sdk_library_import {
     name: "conscrypt.module.platform.api",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
+        "//build/soong/java/core-libraries",
         "//external/conscrypt",
         "//external/wycheproof",
-        "//libcore:__subpackages__",
         "//prebuilts:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
@@ -203,9 +286,15 @@ java_sdk_library_import {
     },
 }
 
-java_sdk_library_import {
+module_java_sdk_library_import {
     name: "conscrypt.module.intra.core.api",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//external/conscrypt",
         "//external/okhttp",
@@ -281,9 +370,15 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+module_cc_prebuilt_library_shared {
     name: "libconscrypt_jni",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
