@@ -1,5 +1,14 @@
 // This is auto-generated. DO NOT EDIT.
 
+// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
+soong_config_module_type_import {
+    from: "packages/modules/common/Android.bp",
+    module_types: [
+        "module_cc_prebuilt_library_shared",
+        "module_java_import",
+    ],
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -28,9 +37,15 @@ java_import {
     },
 }
 
-java_import {
+module_java_import {
     name: "conscrypt-unbundled",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//build/make/tools/signapk",
         "//external/conscrypt",
@@ -88,6 +103,7 @@ cc_prebuilt_library_shared {
         "//build/make/tools/signapk",
         "//external/conscrypt",
         "//tools/apksig",
+        "//vendor:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-host-exports_external_conscrypt_license@current"],
@@ -123,13 +139,20 @@ cc_prebuilt_library_shared {
     },
 }
 
-cc_prebuilt_library_shared {
+module_cc_prebuilt_library_shared {
     name: "libconscrypt_openjdk_jni",
-    prefer: false,
+    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    prefer: true,
+    soong_config_variables: {
+        module_build_from_source: {
+            prefer: false,
+        },
+    },
     visibility: [
         "//build/make/tools/signapk",
         "//external/conscrypt",
         "//tools/apksig",
+        "//vendor:__subpackages__",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-host-exports_external_conscrypt_license"],
