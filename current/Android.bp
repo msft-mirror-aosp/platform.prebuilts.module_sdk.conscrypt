@@ -96,7 +96,7 @@ java_import {
         "test_com.android.conscrypt",
     ],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license@current"],
-    jars: ["java/conscrypt.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/conscrypt.jar"],
     permitted_packages: [
         "android.net.ssl",
         "com.android.org.conscrypt",
@@ -122,7 +122,7 @@ module_java_import {
         "test_com.android.conscrypt",
     ],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
-    jars: ["java/conscrypt.jar"],
+    jars: ["java_boot_libs/snapshot/jars/are/invalid/conscrypt.jar"],
     permitted_packages: [
         "android.net.ssl",
         "com.android.org.conscrypt",
