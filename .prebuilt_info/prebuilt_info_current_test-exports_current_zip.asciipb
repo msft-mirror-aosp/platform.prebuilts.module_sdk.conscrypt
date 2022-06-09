@@ -2,9 +2,9 @@ drops {
   android_build_drop {
     build_id: "T1004135"
     target: "train_build"
-    source_file: "mainline-sdks/for-Tiramisu-build/current/com.google.android.conscrypt/sdk/conscrypt-module-sdk-current.zip"
+    source_file: "mainline-sdks/for-Tiramisu-build/current/com.google.android.conscrypt/test-exports/conscrypt-module-test-exports-current.zip"
   }
-  dest_file: "current/current.zip"
+  dest_file: "current/test-exports/current.zip"
   version: ""
   version_group: ""
   git_project: "platform/prebuilts/module_sdk/conscrypt"
