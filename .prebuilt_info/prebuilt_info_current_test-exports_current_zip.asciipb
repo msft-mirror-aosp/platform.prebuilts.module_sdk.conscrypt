@@ -1,6 +1,10 @@
 drops {
   android_build_drop {
+<<<<<<< HEAD   (926922 [automerger skipped] DO NOT MERGE - Merge TP1A.220624.013 am)
     build_id: "T1004067"
+=======
+    build_id: "T1004275"
+>>>>>>> CHANGE (e9ec21 DO NOT MERGE Drop prebuilt files to android source tree.)
     target: "train_build"
     source_file: "mainline-sdks/for-Tiramisu-build/current/com.google.android.conscrypt/test-exports/conscrypt-module-test-exports-current.zip"
   }
