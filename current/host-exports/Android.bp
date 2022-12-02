@@ -48,6 +48,7 @@ module_java_import {
     },
     visibility: [
         "//build/make/tools/signapk",
+        "//external/robolectric:__subpackages__",
         "//external/conscrypt",
         "//tools/apksig",
     ],
