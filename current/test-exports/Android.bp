@@ -1,29 +1,17 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
-soong_config_module_type_import {
-    from: "packages/modules/common/Android.bp",
-    module_types: [
-        "module_cc_prebuilt_library_shared",
-        "module_java_import",
-        "module_java_test_import",
-    ],
-}
-
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-module_java_import {
+java_import {
     name: "conscrypt-for-host",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: [
         "//art/build",
@@ -36,14 +24,12 @@ module_java_import {
     jars: ["java/conscrypt-for-host.jar"],
 }
 
-module_java_test_import {
+java_test_import {
     name: "conscrypt-tests",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: [
         "//cts/tests/libcore/luni",
@@ -71,14 +57,12 @@ license {
     ],
 }
 
-module_cc_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libjavacrypto",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: [
