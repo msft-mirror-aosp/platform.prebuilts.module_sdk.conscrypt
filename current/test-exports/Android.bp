@@ -16,8 +16,8 @@ java_import {
     visibility: [
         "//art/build",
         "//external/conscrypt",
+        "//external/robolectric",
         "//external/robolectric-shadows",
-        "//external/robolectric:__subpackages__",
         "//frameworks/layoutlib",
     ],
     apex_available: ["//apex_available:platform"],

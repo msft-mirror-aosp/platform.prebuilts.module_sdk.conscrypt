@@ -16,6 +16,7 @@ java_import {
     visibility: [
         "//build/make/tools/signapk",
         "//external/conscrypt",
+        "//external/robolectric/robolectric",
         "//external/robolectric:__subpackages__",
         "//tools/apksig",
     ],
