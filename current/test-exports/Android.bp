@@ -16,8 +16,8 @@ java_import {
     visibility: [
         "//art/build",
         "//external/conscrypt",
+        "//external/robolectric",
         "//external/robolectric-shadows",
-        "//external/robolectric:__subpackages__",
         "//frameworks/layoutlib",
     ],
     apex_available: ["//apex_available:platform"],
@@ -72,17 +72,17 @@ cc_prebuilt_library_shared {
     ],
     licenses: ["conscrypt-module-test-exports_external_conscrypt_license"],
     host_supported: true,
-    shared_libs: [
-        "libcrypto",
-        "liblog",
-        "libssl",
-    ],
     target: {
         host: {
             enabled: false,
         },
         android: {
             compile_multilib: "both",
+            shared_libs: [
+                "liblog",
+                "libcrypto",
+                "libssl",
+            ],
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libjavacrypto.so"],
@@ -98,6 +98,7 @@ cc_prebuilt_library_shared {
         },
         linux_bionic: {
             compile_multilib: "64",
+            shared_libs: ["liblog"],
         },
         linux_bionic_x86_64: {
             enabled: true,
@@ -105,6 +106,7 @@ cc_prebuilt_library_shared {
         },
         linux_glibc: {
             compile_multilib: "both",
+            shared_libs: ["liblog"],
         },
         linux_glibc_x86_64: {
             enabled: true,
