@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -50,7 +56,6 @@ java_import {
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
-        "//system/apex/tests",
     ],
     apex_available: [
         "com.android.conscrypt",
@@ -58,6 +63,7 @@ java_import {
     ],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
     jars: ["java_boot_libs/snapshot/jars/are/invalid/conscrypt.jar"],
+    min_sdk_version: "29",
     permitted_packages: [
         "android.net.ssl",
         "com.android.org.conscrypt",
@@ -85,27 +91,27 @@ java_sdk_library_import {
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
     shared_library: false,
     public: {
-        jars: ["sdk_library/public/conscrypt.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.public.api.srcjar"],
-        current_api: "sdk_library/public/conscrypt.module.public.api.txt",
-        removed_api: "sdk_library/public/conscrypt.module.public.api-removed.txt",
-        annotations: "sdk_library/public/conscrypt.module.public.api_annotations.zip",
+        jars: ["sdk_library/public/conscrypt-stubs.jar"],
+        stub_srcs: ["sdk_library/public/conscrypt.srcjar"],
+        current_api: "sdk_library/public/conscrypt.txt",
+        removed_api: "sdk_library/public/conscrypt-removed.txt",
+        annotations: "sdk_library/public/conscrypt_annotations.zip",
         sdk_version: "none",
     },
     system: {
-        jars: ["sdk_library/system/conscrypt.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/system/conscrypt.module.public.api.srcjar"],
-        current_api: "sdk_library/system/conscrypt.module.public.api.txt",
-        removed_api: "sdk_library/system/conscrypt.module.public.api-removed.txt",
-        annotations: "sdk_library/system/conscrypt.module.public.api_annotations.zip",
+        jars: ["sdk_library/system/conscrypt-stubs.jar"],
+        stub_srcs: ["sdk_library/system/conscrypt.srcjar"],
+        current_api: "sdk_library/system/conscrypt.txt",
+        removed_api: "sdk_library/system/conscrypt-removed.txt",
+        annotations: "sdk_library/system/conscrypt_annotations.zip",
         sdk_version: "none",
     },
     module_lib: {
-        jars: ["sdk_library/module-lib/conscrypt.module.public.api-stubs.jar"],
-        stub_srcs: ["sdk_library/module-lib/conscrypt.module.public.api.srcjar"],
-        current_api: "sdk_library/module-lib/conscrypt.module.public.api.txt",
-        removed_api: "sdk_library/module-lib/conscrypt.module.public.api-removed.txt",
-        annotations: "sdk_library/module-lib/conscrypt.module.public.api_annotations.zip",
+        jars: ["sdk_library/module-lib/conscrypt-stubs.jar"],
+        stub_srcs: ["sdk_library/module-lib/conscrypt.srcjar"],
+        current_api: "sdk_library/module-lib/conscrypt.txt",
+        removed_api: "sdk_library/module-lib/conscrypt-removed.txt",
+        annotations: "sdk_library/module-lib/conscrypt_annotations.zip",
         sdk_version: "none",
     },
 }
@@ -128,10 +134,10 @@ java_sdk_library_import {
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
     shared_library: false,
     public: {
-        jars: ["sdk_library/public/conscrypt.module.platform.api-stubs.jar"],
-        stub_srcs: ["sdk_library/public/conscrypt.module.platform.api.srcjar"],
-        current_api: "sdk_library/public/conscrypt.module.platform.api.txt",
-        removed_api: "sdk_library/public/conscrypt.module.platform.api-removed.txt",
+        jars: ["sdk_library/public/conscrypt-coreplatform-stubs.jar"],
+        stub_srcs: ["sdk_library/public/conscrypt-coreplatform.srcjar"],
+        current_api: "sdk_library/public/conscrypt-coreplatform.txt",
+        removed_api: "sdk_library/public/conscrypt-coreplatform-removed.txt",
         sdk_version: "none",
     },
 }
