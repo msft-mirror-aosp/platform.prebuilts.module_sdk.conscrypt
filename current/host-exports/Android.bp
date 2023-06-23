@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -23,6 +29,7 @@ java_import {
     licenses: ["conscrypt-module-host-exports_external_conscrypt_license"],
     device_supported: false,
     host_supported: true,
+    min_sdk_version: "31",
     target: {
         linux_bionic: {
             jars: ["java/linux_bionic/conscrypt-unbundled.jar"],
