@@ -799,11 +799,13 @@ Lcom/android/org/conscrypt/OpenSSLX25519PrivateKey;->getEncoded()[B,core-platfor
 Lcom/android/org/conscrypt/OpenSSLX25519PrivateKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PrivateKey;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PrivateKey;->isDestroyed()Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/OpenSSLX25519PrivateKey;->serialVersionUID:J,sdk
 Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->getAlgorithm()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->getEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/OpenSSLX25519PublicKey;->serialVersionUID:J,sdk
 Lcom/android/org/conscrypt/OpenSSLX509CRL;-><init>(J)V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/OpenSSLX509CRL;->finalize()V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLX509CRL;->fromPkcs7DerInputStream(Ljava/io/InputStream;)Ljava/util/List;,lo-prio,max-target-o
