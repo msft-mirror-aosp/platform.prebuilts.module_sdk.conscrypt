@@ -1,13 +1,9 @@
 // This is auto-generated. DO NOT EDIT.
 
-// Soong config variable stanza added by vendor/google/build/mainline_modules_sdks.py.
-soong_config_module_type_import {
-    from: "packages/modules/common/Android.bp",
-    module_types: [
-        "module_cc_prebuilt_library_shared",
-        "module_java_import",
-        "module_java_test_import",
-    ],
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
 }
 
 package {
@@ -16,18 +12,17 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-module_java_import {
+java_import {
     name: "conscrypt-for-host",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: [
         "//art/build",
         "//external/conscrypt",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//frameworks/layoutlib",
     ],
@@ -36,14 +31,12 @@ module_java_import {
     jars: ["java/conscrypt-for-host.jar"],
 }
 
-module_java_test_import {
+java_test_import {
     name: "conscrypt-tests",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: [
         "//cts/tests/libcore/luni",
@@ -71,14 +64,12 @@ license {
     ],
 }
 
-module_cc_prebuilt_library_shared {
+cc_prebuilt_library_shared {
     name: "libjavacrypto",
     // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    prefer: true,
-    soong_config_variables: {
-        module_build_from_source: {
-            prefer: false,
-        },
+    use_source_config_var: {
+        config_namespace: "ANDROID",
+        var_name: "module_build_from_source",
     },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: [
@@ -87,17 +78,17 @@ module_cc_prebuilt_library_shared {
     ],
     licenses: ["conscrypt-module-test-exports_external_conscrypt_license"],
     host_supported: true,
-    shared_libs: [
-        "libcrypto",
-        "liblog",
-        "libssl",
-    ],
     target: {
         host: {
             enabled: false,
         },
         android: {
             compile_multilib: "both",
+            shared_libs: [
+                "liblog",
+                "libcrypto",
+                "libssl",
+            ],
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libjavacrypto.so"],
@@ -113,6 +104,7 @@ module_cc_prebuilt_library_shared {
         },
         linux_bionic: {
             compile_multilib: "64",
+            shared_libs: ["liblog"],
         },
         linux_bionic_x86_64: {
             enabled: true,
@@ -120,6 +112,7 @@ module_cc_prebuilt_library_shared {
         },
         linux_glibc: {
             compile_multilib: "both",
+            shared_libs: ["liblog"],
         },
         linux_glibc_x86_64: {
             enabled: true,
