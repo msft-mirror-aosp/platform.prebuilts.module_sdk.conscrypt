@@ -1,9 +1,9 @@
-Landroid/net/ssl/SSLEngines;->exportKeyingMaterial(Ljavax/net/ssl/SSLEngine;Ljava/lang/String;[BI)[B,public-api,system-api,test-api
-Landroid/net/ssl/SSLEngines;->isSupportedEngine(Ljavax/net/ssl/SSLEngine;)Z,public-api,system-api,test-api
-Landroid/net/ssl/SSLEngines;->setUseSessionTickets(Ljavax/net/ssl/SSLEngine;Z)V,public-api,system-api,test-api
-Landroid/net/ssl/SSLSockets;->exportKeyingMaterial(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;[BI)[B,public-api,system-api,test-api
-Landroid/net/ssl/SSLSockets;->isSupportedSocket(Ljavax/net/ssl/SSLSocket;)Z,public-api,system-api,test-api
-Landroid/net/ssl/SSLSockets;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V,public-api,system-api,test-api
+Landroid/net/ssl/SSLEngines;->exportKeyingMaterial(Ljavax/net/ssl/SSLEngine;Ljava/lang/String;[BI)[B,core-platform-api,public-api,system-api,test-api
+Landroid/net/ssl/SSLEngines;->isSupportedEngine(Ljavax/net/ssl/SSLEngine;)Z,core-platform-api,public-api,system-api,test-api
+Landroid/net/ssl/SSLEngines;->setUseSessionTickets(Ljavax/net/ssl/SSLEngine;Z)V,core-platform-api,public-api,system-api,test-api
+Landroid/net/ssl/SSLSockets;->exportKeyingMaterial(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;[BI)[B,core-platform-api,public-api,system-api,test-api
+Landroid/net/ssl/SSLSockets;->isSupportedSocket(Ljavax/net/ssl/SSLSocket;)Z,core-platform-api,public-api,system-api,test-api
+Landroid/net/ssl/SSLSockets;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getApplicationProtocol()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getHandshakeApplicationProtocol()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getHandshakeSession()Ljavax/net/ssl/SSLSession;,core-platform-api,public-api,system-api,test-api
@@ -834,5 +834,8 @@ Lcom/android/org/conscrypt/X509PublicKey;->getEncoded()[B,core-platform-api,publ
 Lcom/android/org/conscrypt/X509PublicKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/X509PublicKey;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/X509PublicKey;->toString()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->getFormat()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ct/CTLogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ct/CTLogInfo;->hashCode()I,core-platform-api,public-api,system-api,test-api
