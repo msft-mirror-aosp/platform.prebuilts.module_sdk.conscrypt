@@ -327,6 +327,7 @@ Lcom/android/org/conscrypt/GCMParameters;->engineInit(Ljava/security/spec/Algori
 Lcom/android/org/conscrypt/GCMParameters;->engineInit([B)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineInit([BLjava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineToString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/HpkeDecryptException;->serialVersionUID:J,sdk
 Lcom/android/org/conscrypt/IvParameters;->engineGetEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/IvParameters;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/IvParameters;->engineGetParameterSpec(Ljava/lang/Class;)Ljava/security/spec/AlgorithmParameterSpec;,core-platform-api,public-api,sdk,system-api,test-api
