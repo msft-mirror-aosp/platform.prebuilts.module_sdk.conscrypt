@@ -14,10 +14,10 @@ package {
 
 java_import {
     name: "conscrypt-for-host",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
     use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
+        config_namespace: "conscrypt_module",
+        var_name: "source_build",
     },
     visibility: [
         "//art/build",
@@ -33,10 +33,10 @@ java_import {
 
 java_test_import {
     name: "conscrypt-tests",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
     use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
+        config_namespace: "conscrypt_module",
+        var_name: "source_build",
     },
     visibility: [
         "//cts/tests/libcore/luni",
@@ -67,10 +67,10 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libjavacrypto",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
     use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
+        config_namespace: "conscrypt_module",
+        var_name: "source_build",
     },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: [
