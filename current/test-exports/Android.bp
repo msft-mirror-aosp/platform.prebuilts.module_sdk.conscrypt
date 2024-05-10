@@ -1,5 +1,11 @@
 // This is auto-generated. DO NOT EDIT.
 
+// blueprint rules added by vendor/google/build/mainline_modules_sdks.py
+// to support coexistence.
+blueprint_package_includes {
+    match_all: ["com.android.mainline"]
+}
+
 package {
     // A default list here prevents the license LSC from adding its own list which would
     // be unnecessary as every module in the sdk already has its own licenses property.
@@ -16,6 +22,7 @@ java_import {
     visibility: [
         "//art/build",
         "//external/conscrypt",
+        "//external/robolectric",
         "//external/robolectric-shadows",
         "//frameworks/layoutlib",
     ],
@@ -35,6 +42,7 @@ java_test_import {
         "//cts/tests/libcore/luni",
         "//external/conscrypt",
         "//external/conscrypt/apex/tests",
+        "//libcore",
     ],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-test-exports_external_conscrypt_license"],
@@ -71,17 +79,17 @@ cc_prebuilt_library_shared {
     ],
     licenses: ["conscrypt-module-test-exports_external_conscrypt_license"],
     host_supported: true,
-    shared_libs: [
-        "libcrypto",
-        "liblog",
-        "libssl",
-    ],
     target: {
         host: {
             enabled: false,
         },
         android: {
             compile_multilib: "both",
+            shared_libs: [
+                "liblog",
+                "libcrypto",
+                "libssl",
+            ],
         },
         android_arm64: {
             srcs: ["android/arm64/lib/libjavacrypto.so"],
@@ -97,6 +105,7 @@ cc_prebuilt_library_shared {
         },
         linux_bionic: {
             compile_multilib: "64",
+            shared_libs: ["liblog"],
         },
         linux_bionic_x86_64: {
             enabled: true,
@@ -104,6 +113,7 @@ cc_prebuilt_library_shared {
         },
         linux_glibc: {
             compile_multilib: "both",
+            shared_libs: ["liblog"],
         },
         linux_glibc_x86_64: {
             enabled: true,
