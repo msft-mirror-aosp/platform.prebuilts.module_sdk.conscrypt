@@ -982,6 +982,13 @@ Lcom/android/org/conscrypt/SSLParametersImpl;->getDefaultX509TrustManager()Ljava
 Lcom/android/org/conscrypt/SSLParametersImpl;->getX509TrustManager()Ljavax/net/ssl/X509TrustManager;,max-target-r
 Lcom/android/org/conscrypt/SSLParametersImpl;->setEnabledProtocols([Ljava/lang/String;)V,max-target-r
 Lcom/android/org/conscrypt/SSLParametersImpl;->x509TrustManager:Ljavax/net/ssl/X509TrustManager;,unsupported
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getAlgorithm()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->serialVersionUID:J,sdk
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getApplicationBufferSize()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCipherSuite()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCreationTime()J,core-platform-api,public-api,sdk,system-api,test-api
