@@ -94,6 +94,7 @@ Lcom/android/org/conscrypt/ActiveSession;->putValue(Ljava/lang/String;Ljava/lang
 Lcom/android/org/conscrypt/ActiveSession;->removeValue(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/CertBlocklistImpl$1;->removeEldestEntry(Ljava/util/Map$Entry;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertificatePriorityComparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I,core-platform-api,public-api,system-api,test-api
