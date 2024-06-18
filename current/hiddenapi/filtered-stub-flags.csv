@@ -94,6 +94,7 @@ Lcom/android/org/conscrypt/ActiveSession;->putValue(Ljava/lang/String;Ljava/lang
 Lcom/android/org/conscrypt/ActiveSession;->removeValue(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/CertBlocklistImpl$1;->removeEldestEntry(Ljava/util/Map$Entry;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertificatePriorityComparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I,core-platform-api,public-api,system-api,test-api
@@ -744,6 +745,12 @@ Lcom/android/org/conscrypt/SSLNullSession;->isValid()Z,core-platform-api,public-
 Lcom/android/org/conscrypt/SSLNullSession;->putValue(Ljava/lang/String;Ljava/lang/Object;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/SSLNullSession;->removeValue(Ljava/lang/String;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/SSLParametersImpl;->clone()Ljava/lang/Object;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getAlgorithm()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getEncoded()[B,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getApplicationBufferSize()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCipherSuite()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCreationTime()J,core-platform-api,public-api,system-api,test-api
