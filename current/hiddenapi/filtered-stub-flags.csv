@@ -599,6 +599,7 @@ Lcom/android/org/conscrypt/OpenSSLSocketImpl;->isInputShutdown()Z,core-platform-
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->isOutputShutdown()Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->removeHandshakeCompletedListener(Ljavax/net/ssl/HandshakeCompletedListener;)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([B)V,core-platform-api
+Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols([Ljava/lang/String;)V,core-platform-api
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setChannelIdPrivateKey(Ljava/security/PrivateKey;)V,core-platform-api
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHandshakeTimeout(I)V,core-platform-api
 Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname(Ljava/lang/String;)V,core-platform-api
