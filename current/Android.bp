@@ -18,11 +18,6 @@ apex_contributions_defaults {
 
 prebuilt_bootclasspath_fragment {
     name: "com.android.conscrypt-bootclasspath-fragment",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["com.android.conscrypt"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
@@ -52,11 +47,6 @@ prebuilt_bootclasspath_fragment {
 
 java_import {
     name: "conscrypt",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//device:__subpackages__",
         "//external/conscrypt:__subpackages__",
@@ -76,11 +66,6 @@ java_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.public.api",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//build/soong/java/core-libraries",
         "//external/conscrypt",
@@ -122,11 +107,6 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.platform.api",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//build/soong/java/core-libraries",
         "//external/conscrypt",
@@ -148,11 +128,6 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "conscrypt.module.intra.core.api",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: [
         "//external/conscrypt",
         "//external/okhttp",
@@ -188,11 +163,6 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libconscrypt_jni",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
-    use_source_config_var: {
-        config_namespace: "conscrypt_module",
-        var_name: "source_build",
-    },
     visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-sdk_external_conscrypt_license"],
