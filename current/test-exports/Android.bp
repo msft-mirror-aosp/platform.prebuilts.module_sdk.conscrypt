@@ -66,7 +66,10 @@ cc_prebuilt_library_shared {
         config_namespace: "ANDROID",
         var_name: "module_build_from_source",
     },
-    visibility: ["//external/conscrypt:__subpackages__"],
+    visibility: [
+        "//external/conscrypt:__subpackages__",
+        "//art/tools/ahat",
+    ],
     apex_available: [
         "com.android.conscrypt",
         "test_com.android.conscrypt",
