@@ -6,13 +6,17 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+apex_contributions_defaults {
+    name: "conscrypt-module-test-exports.contributions",
+    contents: [
+        "prebuilt_conscrypt-for-host",
+        "prebuilt_conscrypt-tests",
+        "prebuilt_libjavacrypto",
+    ],
+}
+
 java_import {
     name: "conscrypt-for-host",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
-    },
     visibility: [
         "//art/build",
         "//external/conscrypt",
@@ -27,11 +31,6 @@ java_import {
 
 java_test_import {
     name: "conscrypt-tests",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
-    },
     visibility: [
         "//cts/tests/libcore/luni",
         "//external/conscrypt",
@@ -61,11 +60,6 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libjavacrypto",
-    // Do not prefer prebuilt if the Soong config variable "module_build_from_source" in namespace "ANDROID" is true.
-    use_source_config_var: {
-        config_namespace: "ANDROID",
-        var_name: "module_build_from_source",
-    },
     visibility: [
         "//external/conscrypt:__subpackages__",
         "//art/tools/ahat",
