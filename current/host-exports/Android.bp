@@ -16,6 +16,11 @@ apex_contributions_defaults {
 
 java_import {
     name: "conscrypt-unbundled",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
+    use_source_config_var: {
+        config_namespace: "conscrypt_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//build/make/tools/signapk",
         "//external/conscrypt",
@@ -54,6 +59,11 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libconscrypt_openjdk_jni",
+    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "conscrypt_module" is true.
+    use_source_config_var: {
+        config_namespace: "conscrypt_module",
+        var_name: "source_build",
+    },
     visibility: [
         "//build/make/tools/signapk",
         "//cts/hostsidetests/library",
