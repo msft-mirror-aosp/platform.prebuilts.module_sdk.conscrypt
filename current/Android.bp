@@ -183,4 +183,7 @@ cc_prebuilt_library_shared {
             srcs: ["x86/lib/libconscrypt_jni.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
