@@ -112,4 +112,7 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libjavacrypto.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
