@@ -21,8 +21,12 @@ Lcom/android/org/conscrypt/ConscryptEngineSocket;->setHostname(Ljava/lang/String
 Lcom/android/org/conscrypt/ConscryptEngineSocket;->setUseSessionTickets(Z)V,max-target-q
 Lcom/android/org/conscrypt/ConscryptFileDescriptorSocket;->setHostname(Ljava/lang/String;)V,max-target-q
 Lcom/android/org/conscrypt/ConscryptFileDescriptorSocket;->setUseSessionTickets(Z)V,max-target-q
+Lcom/android/org/conscrypt/CustomFeatureFlags;->certificateTransparencyPlatform()Z,unsupported
+Lcom/android/org/conscrypt/FeatureFlags;->certificateTransparencyPlatform()Z,unsupported
+Lcom/android/org/conscrypt/FeatureFlagsImpl;->certificateTransparencyPlatform()Z,unsupported
 Lcom/android/org/conscrypt/FileClientSessionCache$Impl;->getSessionData(Ljava/lang/String;I)[B,unsupported
 Lcom/android/org/conscrypt/FileClientSessionCache;->usingDirectory(Ljava/io/File;)Lcom/android/org/conscrypt/SSLClientSessionCache;,unsupported
+Lcom/android/org/conscrypt/Flags;->certificateTransparencyPlatform()Z,unsupported
 Lcom/android/org/conscrypt/NativeCrypto;->ASN1_TIME_to_Calendar(JLjava/util/Calendar;)V,unsupported
 Lcom/android/org/conscrypt/NativeCrypto;->ASN1_seq_pack_X509([J)[B,unsupported
 Lcom/android/org/conscrypt/NativeCrypto;->ASN1_seq_unpack_X509_bio(J)[J,unsupported
