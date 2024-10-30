@@ -95,8 +95,6 @@ Lcom/android/org/conscrypt/ActiveSession;->removeValue(Ljava/lang/String;)V,core
 Lcom/android/org/conscrypt/ByteArray;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$1;->removeEldestEntry(Ljava/util/Map$Entry;)Z,core-platform-api,public-api,system-api,test-api
-Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
-Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->hashCode()I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/CertificatePriorityComparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ClientSessionContext$HostAndPort;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ClientSessionContext$HostAndPort;->hashCode()I,core-platform-api,public-api,system-api,test-api
@@ -232,6 +230,7 @@ Lcom/android/org/conscrypt/ConscryptServerSocket;->setNeedClientAuth(Z)V,core-pl
 Lcom/android/org/conscrypt/ConscryptServerSocket;->setUseClientMode(Z)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ConscryptServerSocket;->setWantClientAuth(Z)V,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/ConscryptSession;->getPeerCertificates()[Ljava/security/cert/Certificate;,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/CustomFeatureFlags$$ExternalSyntheticLambda0;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,system-api,test-api
@@ -844,5 +843,5 @@ Lcom/android/org/conscrypt/X509PublicKey;->toString()Ljava/lang/String;,core-pla
 Lcom/android/org/conscrypt/XdhKeySpec;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/XdhKeySpec;->getFormat()Ljava/lang/String;,core-platform-api,public-api,system-api,test-api
 Lcom/android/org/conscrypt/XdhKeySpec;->hashCode()I,core-platform-api,public-api,system-api,test-api
-Lcom/android/org/conscrypt/ct/CTLogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
-Lcom/android/org/conscrypt/ct/CTLogInfo;->hashCode()I,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ct/LogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,system-api,test-api
+Lcom/android/org/conscrypt/ct/LogInfo;->hashCode()I,core-platform-api,public-api,system-api,test-api
