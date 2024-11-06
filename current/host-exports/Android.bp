@@ -92,4 +92,7 @@ cc_prebuilt_library_shared {
             srcs: ["linux_glibc/x86/lib/libconscrypt_openjdk_jni.so"],
         },
     },
+    strip: {
+        none: true,
+    },
 }
