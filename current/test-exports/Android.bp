@@ -60,10 +60,7 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libjavacrypto",
-    visibility: [
-        "//external/conscrypt:__subpackages__",
-        "//art/tools/ahat",
-    ],
+    visibility: ["//external/conscrypt:__subpackages__"],
     apex_available: [
         "com.android.conscrypt",
         "test_com.android.conscrypt",
@@ -114,5 +111,8 @@ cc_prebuilt_library_shared {
             enabled: true,
             srcs: ["linux_glibc/x86/lib/libjavacrypto.so"],
         },
+    },
+    strip: {
+        none: true,
     },
 }
