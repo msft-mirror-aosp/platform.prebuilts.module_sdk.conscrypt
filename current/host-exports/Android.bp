@@ -16,12 +16,7 @@ apex_contributions_defaults {
 
 java_import {
     name: "conscrypt-unbundled",
-    visibility: [
-        "//build/make/tools/signapk",
-        "//external/conscrypt",
-        "//external/robolectric:__subpackages__",
-        "//tools/apksig",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-host-exports_external_conscrypt_license"],
     device_supported: false,
@@ -54,13 +49,7 @@ license {
 
 cc_prebuilt_library_shared {
     name: "libconscrypt_openjdk_jni",
-    visibility: [
-        "//build/make/tools/signapk",
-        "//cts/hostsidetests/library",
-        "//external/conscrypt",
-        "//tools/apksig",
-        "//vendor:__subpackages__",
-    ],
+    visibility: ["//visibility:public"],
     apex_available: ["//apex_available:platform"],
     licenses: ["conscrypt-module-host-exports_external_conscrypt_license"],
     device_supported: false,
