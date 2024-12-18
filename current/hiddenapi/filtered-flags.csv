@@ -1,9 +1,9 @@
-Landroid/net/ssl/SSLEngines;->exportKeyingMaterial(Ljavax/net/ssl/SSLEngine;Ljava/lang/String;[BI)[B,public-api,sdk,system-api,test-api
-Landroid/net/ssl/SSLEngines;->isSupportedEngine(Ljavax/net/ssl/SSLEngine;)Z,public-api,sdk,system-api,test-api
-Landroid/net/ssl/SSLEngines;->setUseSessionTickets(Ljavax/net/ssl/SSLEngine;Z)V,public-api,sdk,system-api,test-api
-Landroid/net/ssl/SSLSockets;->exportKeyingMaterial(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;[BI)[B,public-api,sdk,system-api,test-api
-Landroid/net/ssl/SSLSockets;->isSupportedSocket(Ljavax/net/ssl/SSLSocket;)Z,public-api,sdk,system-api,test-api
-Landroid/net/ssl/SSLSockets;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLEngines;->exportKeyingMaterial(Ljavax/net/ssl/SSLEngine;Ljava/lang/String;[BI)[B,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLEngines;->isSupportedEngine(Ljavax/net/ssl/SSLEngine;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLEngines;->setUseSessionTickets(Ljavax/net/ssl/SSLEngine;Z)V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLSockets;->exportKeyingMaterial(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;[BI)[B,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLSockets;->isSupportedSocket(Ljavax/net/ssl/SSLSocket;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/net/ssl/SSLSockets;->setUseSessionTickets(Ljavax/net/ssl/SSLSocket;Z)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getApplicationProtocol()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getHandshakeApplicationProtocol()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/AbstractConscryptEngine;->getHandshakeSession()Ljavax/net/ssl/SSLSession;,core-platform-api,public-api,sdk,system-api,test-api
@@ -129,6 +129,7 @@ Lcom/android/org/conscrypt/ApplicationProtocolSelectorAdapter;->selector:Lcom/an
 Lcom/android/org/conscrypt/ApplicationProtocolSelectorAdapter;->socket:Ljavax/net/ssl/SSLSocket;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/ByteArray;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/CertBlocklistImpl$1;->removeEldestEntry(Ljava/util/Map$Entry;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/CertPinManager;->checkChainPinning(Ljava/lang/String;Ljava/util/List;)V,lo-prio,max-target-o
@@ -327,6 +328,7 @@ Lcom/android/org/conscrypt/GCMParameters;->engineInit(Ljava/security/spec/Algori
 Lcom/android/org/conscrypt/GCMParameters;->engineInit([B)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineInit([BLjava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineToString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/HpkeDecryptException;->serialVersionUID:J,sdk
 Lcom/android/org/conscrypt/IvParameters;->engineGetEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/IvParameters;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/IvParameters;->engineGetParameterSpec(Ljava/lang/Class;)Ljava/security/spec/AlgorithmParameterSpec;,core-platform-api,public-api,sdk,system-api,test-api
@@ -981,6 +983,13 @@ Lcom/android/org/conscrypt/SSLParametersImpl;->getDefaultX509TrustManager()Ljava
 Lcom/android/org/conscrypt/SSLParametersImpl;->getX509TrustManager()Ljavax/net/ssl/X509TrustManager;,max-target-r
 Lcom/android/org/conscrypt/SSLParametersImpl;->setEnabledProtocols([Ljava/lang/String;)V,max-target-r
 Lcom/android/org/conscrypt/SSLParametersImpl;->x509TrustManager:Ljavax/net/ssl/X509TrustManager;,unsupported
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getAlgorithm()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory$ScryptKey;->serialVersionUID:J,sdk
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ScryptSecretKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getApplicationBufferSize()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCipherSuite()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/SessionSnapshot;->getCreationTime()J,core-platform-api,public-api,sdk,system-api,test-api
@@ -1152,6 +1161,9 @@ Lcom/android/org/conscrypt/X509PublicKey;->getFormat()Ljava/lang/String;,core-pl
 Lcom/android/org/conscrypt/X509PublicKey;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/X509PublicKey;->serialVersionUID:J,sdk
 Lcom/android/org/conscrypt/X509PublicKey;->toString()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/XdhKeySpec;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ct/CTLogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ct/CTLogInfo;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ct/SerializationException;->serialVersionUID:J,sdk
