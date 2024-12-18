@@ -130,8 +130,6 @@ Lcom/android/org/conscrypt/ApplicationProtocolSelectorAdapter;->socket:Ljavax/ne
 Lcom/android/org/conscrypt/ByteArray;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ByteArray;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/CertBlocklistImpl$1;->removeEldestEntry(Ljava/util/Map$Entry;)Z,core-platform-api,public-api,sdk,system-api,test-api
-Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
-Lcom/android/org/conscrypt/CertBlocklistImpl$ByteString;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/CertPinManager;->checkChainPinning(Ljava/lang/String;Ljava/util/List;)V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/CertificatePriorityComparator;-><init>()V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/CertificatePriorityComparator;->ALGORITHM_OID_PRIORITY_MAP:Ljava/util/Map;,lo-prio,max-target-o
@@ -284,6 +282,8 @@ Lcom/android/org/conscrypt/ConscryptServerSocket;->setNeedClientAuth(Z)V,core-pl
 Lcom/android/org/conscrypt/ConscryptServerSocket;->setUseClientMode(Z)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ConscryptServerSocket;->setWantClientAuth(Z)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ConscryptSession;->getPeerCertificates()[Ljava/security/cert/Certificate;,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/CustomFeatureFlags$$ExternalSyntheticLambda0;->test(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/CustomFeatureFlags;->certificateTransparencyPlatform()Z,unsupported
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineGenerateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineGetKeySpec(Ljavax/crypto/SecretKey;Ljava/lang/Class;)Ljava/security/spec/KeySpec;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/DESEDESecretKeyFactory;->engineTranslateKey(Ljavax/crypto/SecretKey;)Ljavax/crypto/SecretKey;,core-platform-api,public-api,sdk,system-api,test-api
@@ -316,11 +316,14 @@ Lcom/android/org/conscrypt/ExternalSession;->invalidate()V,core-platform-api,pub
 Lcom/android/org/conscrypt/ExternalSession;->isValid()Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ExternalSession;->putValue(Ljava/lang/String;Ljava/lang/Object;)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ExternalSession;->removeValue(Ljava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/FeatureFlags;->certificateTransparencyPlatform()Z,unsupported
+Lcom/android/org/conscrypt/FeatureFlagsImpl;->certificateTransparencyPlatform()Z,unsupported
 Lcom/android/org/conscrypt/FileClientSessionCache$CacheFile;->compareTo(Ljava/io/File;)I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/FileClientSessionCache$CacheFile;->compareTo(Ljava/lang/Object;)I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/FileClientSessionCache$CacheFile;->lastModified()J,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/FileClientSessionCache$Impl;->getSessionData(Ljava/lang/String;I)[B,unsupported
 Lcom/android/org/conscrypt/FileClientSessionCache;->usingDirectory(Ljava/io/File;)Lcom/android/org/conscrypt/SSLClientSessionCache;,core-platform-api,unsupported
+Lcom/android/org/conscrypt/Flags;->certificateTransparencyPlatform()Z,unsupported
 Lcom/android/org/conscrypt/GCMParameters;->engineGetEncoded()[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineGetEncoded(Ljava/lang/String;)[B,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/GCMParameters;->engineGetParameterSpec(Ljava/lang/Class;)Ljava/security/spec/AlgorithmParameterSpec;,core-platform-api,public-api,sdk,system-api,test-api
@@ -1040,7 +1043,6 @@ Lcom/android/org/conscrypt/TrustManagerImpl;-><init>(Ljava/security/KeyStore;Lco
 Lcom/android/org/conscrypt/TrustManagerImpl;->TRUST_ANCHOR_COMPARATOR:Lcom/android/org/conscrypt/TrustManagerImpl$TrustAnchorComparator;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->acceptedIssuers(Ljava/security/KeyStore;)[Ljava/security/cert/X509Certificate;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->acceptedIssuers:[Ljava/security/cert/X509Certificate;,lo-prio,max-target-o
-Lcom/android/org/conscrypt/TrustManagerImpl;->checkCT(Ljava/lang/String;Ljava/util/List;[B[B)V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/TrustManagerImpl;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/net/Socket;)V,core-platform-api,public-api,sdk,system-api,test-api
@@ -1054,8 +1056,6 @@ Lcom/android/org/conscrypt/TrustManagerImpl;->checkTrusted([Ljava/security/cert/
 Lcom/android/org/conscrypt/TrustManagerImpl;->checkTrusted([Ljava/security/cert/X509Certificate;[B[BLjava/lang/String;Ljava/lang/String;Z)Ljava/util/List;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->checkTrustedRecursive([Ljava/security/cert/X509Certificate;[B[BLjava/lang/String;ZLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/Set;)Ljava/util/List;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->ctEnabledOverride:Z,lo-prio,max-target-o
-Lcom/android/org/conscrypt/TrustManagerImpl;->ctPolicy:Lcom/android/org/conscrypt/ct/CTPolicy;,lo-prio,max-target-o
-Lcom/android/org/conscrypt/TrustManagerImpl;->ctVerifier:Lcom/android/org/conscrypt/ct/CTVerifier;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->err:Ljava/lang/Exception;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->factory:Ljava/security/cert/CertificateFactory;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->findAllTrustAnchorsByIssuerAndSignature(Ljava/security/cert/X509Certificate;)Ljava/util/Set;,lo-prio,max-target-o
@@ -1071,8 +1071,6 @@ Lcom/android/org/conscrypt/TrustManagerImpl;->intermediateIndex:Lcom/android/org
 Lcom/android/org/conscrypt/TrustManagerImpl;->pinManager:Lcom/android/org/conscrypt/CertPinManager;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->rootKeyStore:Ljava/security/KeyStore;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->setCTEnabledOverride(Z)V,lo-prio,max-target-o
-Lcom/android/org/conscrypt/TrustManagerImpl;->setCTPolicy(Lcom/android/org/conscrypt/ct/CTPolicy;)V,lo-prio,max-target-o
-Lcom/android/org/conscrypt/TrustManagerImpl;->setCTVerifier(Lcom/android/org/conscrypt/ct/CTVerifier;)V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->setOcspResponses(Ljava/security/cert/PKIXParameters;Ljava/security/cert/X509Certificate;[B)V,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->sortPotentialAnchors(Ljava/util/Set;)Ljava/util/Collection;,lo-prio,max-target-o
 Lcom/android/org/conscrypt/TrustManagerImpl;->trustAnchors([Ljava/security/cert/X509Certificate;)Ljava/util/Set;,lo-prio,max-target-o
@@ -1164,6 +1162,6 @@ Lcom/android/org/conscrypt/X509PublicKey;->toString()Ljava/lang/String;,core-pla
 Lcom/android/org/conscrypt/XdhKeySpec;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/XdhKeySpec;->getFormat()Ljava/lang/String;,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/XdhKeySpec;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
-Lcom/android/org/conscrypt/ct/CTLogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
-Lcom/android/org/conscrypt/ct/CTLogInfo;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ct/LogInfo;->equals(Ljava/lang/Object;)Z,core-platform-api,public-api,sdk,system-api,test-api
+Lcom/android/org/conscrypt/ct/LogInfo;->hashCode()I,core-platform-api,public-api,sdk,system-api,test-api
 Lcom/android/org/conscrypt/ct/SerializationException;->serialVersionUID:J,sdk
